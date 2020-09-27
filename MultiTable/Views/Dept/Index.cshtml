@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MultiTable.Models.Dept>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DNo)
+       
+        <th>
+            @Html.DisplayNameFor(model => model.DName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DName)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DNo }) |
+        @Html.ActionLink("Details", "Details", new { id = item.DNo }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.DNo })
+    </td>
+</tr>
+    }
+
+</table>

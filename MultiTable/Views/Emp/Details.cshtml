@@ -1,0 +1,58 @@
+﻿@model MultiTable.Models.DeptEmpModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeptEmpModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ECode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
